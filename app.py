@@ -1,1 +1,1 @@
-print("Hello from Jenkins Pipeline")
+print("Build triggered automatically 🚀")
