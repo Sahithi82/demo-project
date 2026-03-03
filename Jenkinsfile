@@ -4,13 +4,27 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Sahithi82/demo-project.git'
+                echo 'Checking out code...'
+                checkout scm
             }
         }
 
-        stage('Run Script') {
+        stage('Build') {
             steps {
-                sh 'python3 app.py'
+                echo 'Build Stage'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running Script'
+                bat 'python app.py'
+            }
+        }
+
+        stage('Success') {
+            steps {
+                echo 'Pipeline executed successfully!'
             }
         }
     }
