@@ -1,1 +1,2 @@
-print("Build triggered automatically 🚀")
+print("Build triggered automatically")
+print("Jenkins pipeline")
